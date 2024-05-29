@@ -1,8 +1,8 @@
 <?php
 
-namespace Ttapi\MidjourneyCheker\Paramsters\Checker;
+namespace TTapi\MidjourneyChecker\Src\Parameters\Checker;
 
-use Ttapi\MidjourneyCheker\Paramsters\ParamsConfig;
+use TTapi\MidjourneyChecker\Src\Parameters\ParamsConfig;
 
 class BaseChecker
 {

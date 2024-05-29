@@ -1,9 +1,9 @@
 <?php
 
-namespace Ttapi\MidjourneyCheker;
+namespace TTapi\MidjourneyChecker;
 
 
-use Ttapi\MidjourneyCheker\Paramsters\Checker\HandleChecker;
+use TTapi\MidjourneyChecker\Src\Parameters\Checker\HandleChecker;
 
 class PromptChecker{
 
@@ -20,8 +20,11 @@ class PromptChecker{
             $this->prompt = $prompt;
         }
 
-        return (new HandleChecker())->handle($this->prompt);
+        $handleCheck = new HandleChecker();
+
+        return $handleCheck->handle($this->prompt);
     }
 
 
 }
+var_dump((new PromptChecker())->handle('dog --ar 1:1'));

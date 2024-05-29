@@ -1,8 +1,8 @@
 <?php
 
-namespace Ttapi\MidjourneyCheker\Paramsters\Checker;
+namespace TTapi\MidjourneyChecker\Src\Parameters\Checker;
 
-use Ttapi\MidjourneyCheker\Paramsters\ParamsConfig;
+use TTapi\MidjourneyChecker\Src\Parameters\ParamsConfig;
 
 class HandleChecker
 {
@@ -21,13 +21,13 @@ class HandleChecker
     /**
      * @param $prompt
      * @return ParamsConfig|null
-     * @throws \Ttapi\MidjourneyCheker\Exception\InvalidParamsException
+     * @throws \TTapi\MidjourneyChecker\Exception\InvalidParamsException
      */
     public function handle($prompt)
     {
         foreach (self::$objects as $object){
             /**
-             * @var $object \Ttapi\MidjourneyCheker\Paramsters\Checker\Aspect
+             * @var $object Aspect
              */
             $this->paramsConfig = (new $object($this->paramsConfig, $prompt))->handle();
         }

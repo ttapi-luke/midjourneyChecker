@@ -1,6 +1,6 @@
 <?php
 
-namespace Ttapi\MidjourneyCheker\Paramsters\Checker;
+namespace TTapi\MidjourneyChecker\Src\Parameters\Checker;
 
 interface BaseCheckerInterface
 {

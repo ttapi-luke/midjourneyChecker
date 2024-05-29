@@ -1,6 +1,6 @@
 <?php
 
-namespace Ttapi\MidjourneyCheker\Exception;
+namespace TTapi\MidjourneyChecker\Src\Exception;
 
 class InvalidParamsException extends \Exception
 {

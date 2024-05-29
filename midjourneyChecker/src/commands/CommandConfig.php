@@ -1,6 +1,6 @@
 <?php
 
-namespace Ttapi\MidjourneyCheker\Commands;
+namespace TTapi\MidjourneyChecker\Commands;
 
 class CommandConfig
 {

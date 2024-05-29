@@ -1,15 +1,12 @@
 <?php
 
-namespace Ttapi\MidjourneyCheker\Paramsters\Checker;
+namespace TTapi\MidjourneyChecker\Src\Parameters\Checker;
 
-use Ttapi\MidjourneyCheker\Exception\InvalidParamsException;
-use Ttapi\MidjourneyCheker\Paramsters\ParamsConfig;
+use TTapi\MidjourneyChecker\Src\Exception\InvalidParamsException;
+use TTapi\MidjourneyChecker\Src\Parameters\ParamsConfig;
 
 class Aspect extends BaseChecker implements BaseCheckerInterface
 {
-    public $needs = [
-        '--ar', '--aspect'
-    ];
 
     public function __construct(ParamsConfig $paramsConfig, $config = null)
     {
@@ -23,24 +20,19 @@ class Aspect extends BaseChecker implements BaseCheckerInterface
     {
         $prompt = $this->prompt;
 
-        $pattern = '\s+(\d+):(\d+)/';
+        if (preg_match('/(--ar|--aspect)/', $prompt, $matcher)) {
 
-        foreach ($this->needs as $need){
-            if(str_contains($prompt, $need)){
+            if (preg_match('/(--ar|--aspect)\s+(\d+:\d+)/', $prompt, $matches)) {
 
-                if (preg_match("/--$need".$pattern, $prompt, $matches)) {
-                    if (is_numeric($matches[1]) && is_numeric($matches[2])) {
-                        $this->paramsConfig->aspect = $need.' '.$matches[1].':'.$matches[2];
+                $this->paramsConfig->aspect = $matches[0];
 
-                        return $this->paramsConfig;
-
-                    } else {
-                        throw new InvalidParamsException("Invalid $need params [$need.' '.$matches[1].':'.$matches[2]]");
-                    }
-                }
-
+            }else{
+                throw new InvalidParamsException("Invalid params [".substr($prompt, strpos($prompt, $matcher[0]))."]");
             }
+
         }
+
+        return $this->paramsConfig;
 
     }
 

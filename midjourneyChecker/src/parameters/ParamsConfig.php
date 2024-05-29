@@ -1,6 +1,6 @@
 <?php
 
-namespace Ttapi\MidjourneyCheker\Paramsters;
+namespace TTapi\MidjourneyChecker\Src\Parameters;
 
 class ParamsConfig
 {
