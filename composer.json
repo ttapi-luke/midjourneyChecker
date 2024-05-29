@@ -1,14 +1,22 @@
 {
   "name": "ttapi/midjourney-checker",
-  "description": "check and verify midjourney prompt",
+  "description": "Check and verify midjourney prompt",
+  "keywords": [
+    "midjourney",
+    "midjourney api",
+    "midjourney prompt",
+    "midjourney prompt check"
+  ],
   "authors": [
     {
-      "name": "ttapi-luke"
+      "name": "ttapi-luke",
+      "email": "ttapi.io@hotmail.com"
     }
   ],
   "license": "MIT",
   "require": {
-    "php": "^8.0"
+    "php": "^8.0",
+    "ext-json": "*"
   },
   "autoload": {
     "psr-4": {
