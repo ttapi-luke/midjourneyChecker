@@ -1,0 +1,11 @@
+composer.phar
+/vendor/
+
+
+composer.lock
+
+.idea
+.DS_Store
+
+cache/
+*.cache
