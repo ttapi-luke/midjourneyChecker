@@ -3,8 +3,7 @@
   "description": "check and verify midjourney prompt",
   "authors": [
     {
-      "name": "ttapi-luke",
-      "email": "ttapi.io@hotmail"
+      "name": "ttapi-luke"
     }
   ],
   "license": "MIT",
